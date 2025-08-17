@@ -24,9 +24,3 @@ gradlePlugin {
         }
     }
 }
-
-allprojects {
-    apply {
-        plugin("dev.nx.gradle.project-graph")
-    }
-}

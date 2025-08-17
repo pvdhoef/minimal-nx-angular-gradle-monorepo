@@ -4,6 +4,7 @@ group = "com.pvdhoef"
 version = "0.0.1-SNAPSHOT"
 
 plugins {
+    id("dev.nx.gradle.project-graph") version("0.1.4")
     id("com.pvdhoef.gradle.plugins.conventions.kotlin-conventions")
     alias(libs.plugins.kotlin.spring)
     alias(libs.plugins.spring.dependency.management)

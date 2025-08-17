@@ -38,4 +38,16 @@ and adds the following section to the `plugins` section:
 ```
 
 It also adds the plugin `id("dev.nx.gradle.project-graph") version("0.1.4")` to all Gradle projects but this has to
-be edited a bit because the inserted code is not completely correct.
+be edited a bit because the inserted code is not completely correct. It adds this plugin reference via a crude
+find/replace method and it inserts an outdated `allprojects` in the main project.
+
+It is fixed by explicitly adding the Gradle Nx plugin in every `build.gradle.kts`.
+
+Check this to run `gradle tasks` on all Gradle projects and verify that they have the following tasks now:
+```sh
+Reporting tasks
+---------------
+nxProjectGraph - Create Nx project graph for build-logic
+nxProjectReport - Create Nx project report for build-logic
+```
+
