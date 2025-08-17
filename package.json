@@ -1,5 +1,5 @@
 {
-    "name": "@pvdhoef/minimal-nx-angular-monorepo",
+    "name": "@pvdhoef/minimal-nx-angular-gradle-monorepo",
     "version": "0.0.1",
     "license": "UNLICENSED",
     "scripts": {},

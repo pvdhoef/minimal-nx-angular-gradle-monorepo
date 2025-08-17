@@ -3,6 +3,7 @@
 
 # == Nx
 .nx/
+.github/instructions/nx.instructions.md
 # Coverage artifacts generated when running `nx test` with the `--coverage` flag.
 /coverage/
 vite.config.*.timestamp*
@@ -11,26 +12,21 @@ vitest.config.*.timestamp*
 # === Node.js
 node_modules/
 
-# === Gradle / Kotlin / Java
-.gradle/
-.kotlin/
-build/
-
 # === Angular
 .angular/
 dist/
+
+# === Gradle
+.gradle/
+build/
+
+# === Kotlin
+.kotlin/
 
 # === IntelliJ IDEA
 .idea/
 
 # === VS Code
-# Ignore everything inside `.vscode` except project-specific VS Code settings that are useful for all contributors:
-#
-# - settings.json:    Workspace settings (e.g., formatting, linting) that should be shared.
-# - tasks.json:       Build and run tasks for the project.
-# - launch.json:      Debugging configurations.
-# - extensions.json:  Recommended VS Code extensions for the project.
-#
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -40,4 +36,3 @@ dist/
 # === System
 .DS_Store
 Thumbs.db
-
