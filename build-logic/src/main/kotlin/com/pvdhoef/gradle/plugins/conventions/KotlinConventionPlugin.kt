@@ -14,6 +14,9 @@ class KotlinConventionPlugin : Plugin<Project> {
 
         println("Applying Kotlin conventions to project: '${project.name}'")
 
+        // TODO: This should be moved to the general project conventions plugin.
+        project.pluginManager.apply("dev.nx.gradle.project-graph")
+
         // Apply the Kotlin JVM plugin.
         // Aka `kotlin("jvm")`.
         // Aka `alias(libs.plugins.kotlin.jvm)`
