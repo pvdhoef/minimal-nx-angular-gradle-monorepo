@@ -57,5 +57,9 @@
                 "buildTargetName": "build"
             }
         }
-    ]
+    ],
+    "tui": {
+        "enabled": true,
+        "autoExit": 5
+    }
 }

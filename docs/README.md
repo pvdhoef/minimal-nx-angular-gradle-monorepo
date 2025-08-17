@@ -51,3 +51,20 @@ nxProjectGraph - Create Nx project graph for build-logic
 nxProjectReport - Create Nx project report for build-logic
 ```
 
+After this all Gradle projects will be automatically detected by Nx and all commands can be run via Nx, for example:
+```sh
+nx tasks demoapp-server
+```
+Or
+
+```sh
+nx build kotlin-demolib
+```
+
+The previous command runs in a nice Nx TUI, that can be configured by adding the following section to `ns.json`:
+```json
+"tui": {
+    "enabled": true,
+    "autoExit": 5
+}
+```
