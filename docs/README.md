@@ -96,7 +96,7 @@ When an Angular project depends on a Gradle project, the following can be added 
 
 After this, `nx graph` will show:
 
-![Dependency Graph](images/dependency-graph.png)
+![Dependency Graph](images/dependency-graph-1.png)
 
 ## Exclude Gradle 'build-logic' from dependencies graphs
 
@@ -115,3 +115,6 @@ in which this dependency is explicitly disabled:
 Nx will merge the plugin’s auto-generated metadata with what’s in that file.
 
 But a simpler approach would probably be to just hide the `build-logic` in the Nx graph viewer.
+Which will look like this if it is combined with "Group by Folder":
+
+![Dependency Graph](images/dependency-graph-2.png)
