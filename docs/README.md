@@ -6,9 +6,9 @@ It is based on a [minimal Nx Angular monorepo](https://github.com/pvdhoef/minima
 in which a [minimal Gradle multi-module project](https://github.com/pvdhoef/minimal-gradle-multi-module-project)
 has been integrated.
 
-## Install the Nx Gradle plugin
+## Gradle support in Nx
 
-Install the Gradle plugin package for Nx:
+Gradle support in Nx can be installed with:
 ```sh
 npm install --save-dev @nx/gradle
 ```
@@ -37,13 +37,16 @@ and adds the following section to the `plugins` section:
 }
 ```
 
-It also adds the plugin `id("dev.nx.gradle.project-graph") version("0.1.4")` to all Gradle projects but this has to
-be edited a bit because the inserted code is not completely correct. It adds this plugin reference via a crude
-find/replace method and it inserts an outdated `allprojects` in the main project.
+## The Nx Gradle plugin
 
-It is fixed by explicitly adding the Gradle Nx plugin in every `build.gradle.kts`.
+The `nx generate @nx/gradle:init` command also adds the plugin `id("dev.nx.gradle.project-graph") version("0.1.4")`
+to all Gradle projects but this has to be edited a bit because the inserted code is not completely correct.
+It adds this plugin reference via a crude find/replace method and it inserts an outdated `allprojects`
+in the main project.
 
-Check this to run `gradle tasks` on all Gradle projects and verify that they have the following tasks now:
+It can be fixed by explicitly adding the Gradle Nx plugin in every `build.gradle.kts`.
+
+Check this by running `gradle tasks` on all Gradle projects and verify that they have the following tasks now:
 ```sh
 Reporting tasks
 ---------------
@@ -69,7 +72,7 @@ The previous command runs in a nice Nx TUI, that can be configured by adding the
 }
 ```
 
-### Upgrading to the latest Nx packages
+## Upgrading to the latest Nx packages
 
 ```sh
 nx migrate nx@21.4.0
