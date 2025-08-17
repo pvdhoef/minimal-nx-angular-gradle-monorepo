@@ -1,4 +1,4 @@
-rootProject.name = "minimal-gradle-multi-module-project"
+rootProject.name = "minimal-nx-angular-gradle-monorepo"
 
 dependencyResolutionManagement {
 
