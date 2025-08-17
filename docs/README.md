@@ -113,3 +113,5 @@ in which this dependency is explicitly disabled:
 ```
 
 Nx will merge the plugin’s auto-generated metadata with what’s in that file.
+
+But a simpler approach would probably be to just hide the `build-logic` in the Nx graph viewer.
