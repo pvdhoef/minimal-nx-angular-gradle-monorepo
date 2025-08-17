@@ -4,7 +4,8 @@
     The `build-logic` project depends on "org.jetbrains.kotlin:kotlin-gradle-plugin" as a library.
     That means it pulls the plugin classes into its classpath.
 
-    Other projects also apply the Kotlin Gradle plugin indirectly via `plugins { id("org.jetbrains.kotlin.jvm") ... }`.
+    Other projects also apply the Kotlin Gradle plugin indirectly via `plugins {
+    id("dev.nx.gradle.project-graph") version("0.1.4") id("org.jetbrains.kotlin.jvm") ... }`.
     This results in Gradle loading the same plugin again into a different classloader.
 
     The warning message is:
@@ -22,4 +23,10 @@
 plugins {
 
     alias(libs.plugins.kotlin.jvm) apply false
+}
+
+allprojects {
+    apply {
+        plugin("dev.nx.gradle.project-graph")
+    }
 }

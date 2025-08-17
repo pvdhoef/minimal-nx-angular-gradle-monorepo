@@ -3,6 +3,7 @@
 // buildDir = file("../build/build-logic")
 
 plugins {
+    id("dev.nx.gradle.project-graph") version("0.1.4")
     `kotlin-dsl`
 }
 
@@ -21,5 +22,11 @@ gradlePlugin {
             id = "com.pvdhoef.gradle.plugins.conventions.kotlin-conventions"
             implementationClass = "com.pvdhoef.gradle.plugins.conventions.KotlinConventionPlugin"
         }
+    }
+}
+
+allprojects {
+    apply {
+        plugin("dev.nx.gradle.project-graph")
     }
 }
