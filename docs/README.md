@@ -24,7 +24,7 @@ Initialize Gradle support in Nx:
 nx generate @nx/gradle:init
 ```
 
-This will modify `nx.json`. It adda the pattern `"!{projectRoot}/src/test/**/*"` to `namedInputs/production`
+This will modify `nx.json`. It adds the pattern `"!{projectRoot}/src/test/**/*"` to `namedInputs/production`
 and adds the following section to the `plugins` section:
 ```json
 {
@@ -47,11 +47,11 @@ in the main project.
 It can be fixed by explicitly adding the Gradle Nx plugin in every `build.gradle.kts`.
 
 Check this by running `gradle tasks` on all Gradle projects and verify that they have the following tasks now:
-```sh
+```
 Reporting tasks
 ---------------
-nxProjectGraph - Create Nx project graph for build-logic
-nxProjectReport - Create Nx project report for build-logic
+nxProjectGraph - Create Nx project graph for demoapp-server
+nxProjectReport - Create Nx project report for demoapp-server
 ```
 
 After this all Gradle projects will be automatically detected by Nx and all commands can be run via Nx, for example:
