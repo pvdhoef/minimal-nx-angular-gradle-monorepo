@@ -68,3 +68,15 @@ The previous command runs in a nice Nx TUI, that can be configured by adding the
     "autoExit": 5
 }
 ```
+
+### Upgrading to the latest Nx packages
+
+```sh
+nx migrate nx@21.4.0
+```
+and refresh `node_modules`
+
+```sh
+rm -rf node_modules package-lock.json
+npm install
+```
