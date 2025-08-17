@@ -97,3 +97,19 @@ When an Angular project depends on a Gradle project, the following can be added 
 After this, `nx graph` will show:
 
 ![Dependency Graph](images/dependency-graph.png)
+
+## Exclude Gradle 'build-logic' from dependencies graphs
+
+Nx considers Gradle's `build-logic` a project that should be handled as a first class citizen in the monorepo.
+While it is actually a centralized Gradle build configuration as code.
+
+To make Nx believe that `build-logic` is not a dependency, add an explicit `project.json` file to each Gradle project
+in which this dependency is explicitly disabled:
+```json
+{
+    "name": "kotlin-demolib",
+    "implicitDependencies": ["!build-logic"]
+}
+```
+
+Nx will merge the plugin’s auto-generated metadata with what’s in that file.
