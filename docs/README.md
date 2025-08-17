@@ -88,7 +88,7 @@ When an Angular project depends on a Gradle project, the following can be added 
 {
     "name": "demoapp-client",
     "implicitDependencies": ["demoapp-server"],
-    // ... etc.
+    // etc.
 ```
 
 After this, `nx graph` will show:
