@@ -80,3 +80,13 @@ and refresh `node_modules`
 rm -rf node_modules package-lock.json
 npm install
 ```
+
+## Dependencies between Angular projects and Gradle projects
+
+When an Angular project depends on a Gradle project, the following can be added to `project.json`:
+```json
+{
+    "name": "demoapp-client",
+    "implicitDependencies": ["demoapp-server"],
+    ... etc.
+```
