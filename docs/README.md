@@ -90,3 +90,7 @@ When an Angular project depends on a Gradle project, the following can be added 
     "implicitDependencies": ["demoapp-server"],
     ... etc.
 ```
+
+After this, `nx graph` will show:
+
+![Dependency Graph](dependency-graph.png)
