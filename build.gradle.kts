@@ -20,6 +20,6 @@
 */
 
 plugins {
-    id("dev.nx.gradle.project-graph") version("0.1.4")
+    alias(libs.plugins.nx.gradle.plugin) apply false
     alias(libs.plugins.kotlin.jvm) apply false
 }

@@ -3,7 +3,7 @@
 // buildDir = file("../build/build-logic")
 
 plugins {
-    id("dev.nx.gradle.project-graph") version("0.1.4")
+    alias(libs.plugins.nx.gradle.plugin)
     `kotlin-dsl`
 }
 
